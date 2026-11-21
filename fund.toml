@@ -1,0 +1,36 @@
+# ------------------------------------------------------------------
+# Fund settings. Edit this file on GitHub to change the rules.
+# Every edit is a commit, so rule changes are timestamped too.
+# ------------------------------------------------------------------
+
+[fund]
+name = "Paper Long/Short Fund"
+benchmark = "^AXJO"        # S&P/ASX 200 index, used for the comparison line and beta
+beta_lookback_days = 252   # about one trading year
+
+# One sleeve per member. Value = starting paper capital in A$.
+# The sleeve name in trades.csv must match a name here.
+[sleeves]
+lucian = 100000
+member_2 = 100000
+member_3 = 100000
+
+[costs]
+brokerage_bps = 8          # 0.08% of trade value...
+brokerage_min = 10         # ...or A$10, whichever is higher
+default_borrow_rate = 0.02 # 2% a year on the value of every short, charged daily
+cash_rate = 0.0            # interest on idle cash (set e.g. 0.035 to earn it)
+
+# Hard-to-borrow names cost more to short. Add them here.
+[costs.borrow_overrides]
+# "XYZ.AX" = 0.12
+
+[limits]
+max_gross = 2.0            # (longs + shorts) / NAV
+min_net = -0.30            # (longs - shorts) / NAV
+max_net = 0.70
+min_beta = -0.30           # beta of the whole book vs the ASX 200
+max_beta = 0.60
+max_long_position = 0.20   # any single long, as a share of the sleeve's NAV
+max_short_position = 0.10  # any single short, as a share of the sleeve's NAV
+max_drawdown = 0.15        # sleeve is stopped out past this fall from its peak
