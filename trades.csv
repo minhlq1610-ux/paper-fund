@@ -1,8 +1,1 @@
-date,sleeve,ticker,action,quantity,price,thesis,kill_criteria
-2026-10-01,lucian,BHP.AX,BUY,600,,EXAMPLE ONLY - pair leg: long BHP,EXAMPLE - delete these rows before you start
-2026-10-01,lucian,RIO.AX,SHORT,150,,EXAMPLE ONLY - pair leg: short RIO,EXAMPLE
-2026-10-06,member_2,WBC.AX,BUY,500,,EXAMPLE ONLY - long WBC,EXAMPLE
-2026-10-06,member_2,CBA.AX,SHORT,60,,EXAMPLE ONLY - short CBA,EXAMPLE
-2026-10-13,member_3,CSL.AX,BUY,80,,EXAMPLE ONLY - long CSL,EXAMPLE
-2026-10-13,member_3,STW.AX,SHORT,150,,EXAMPLE ONLY - index hedge via ASX 200 ETF,EXAMPLE
-2026-11-03,lucian,BHP.AX,SELL,200,,EXAMPLE ONLY - trim,EXAMPLE
+
